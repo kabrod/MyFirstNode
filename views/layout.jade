@@ -1,0 +1,15 @@
+!!! 5
+html
+	head
+		title=title
+		link(rel='stylesheet',href=base + '/css/style.css')
+		script(src=base + '/js/jquery-1.4.4.min.js', type='text/javascript')
+		script(src=base + '/js/express.js', type='text/javascript')
+	noscript
+		section.noMain
+			hgroup
+				h1 Beklager,
+				h2 du har ikke javascript aktivert!
+			p Denne applikasjonen krever at javascript er aktivert for å fungere</p>
+	section.main
+		body!=body

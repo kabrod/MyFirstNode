@@ -1,0 +1,42 @@
+HEADER, NAV, SECTION, ARTICLE, ASIDE, FOOTER { display: block; text-align: left; }
+
+body {
+	padding: 50px;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+	color: #00B7FF;
+}
+
+label { display: block; width: 9em; }
+
+.noMain {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: #ccc;
+}
+
+
+.noMain H1 {
+	margin-top: 200px;
+}
+
+.noMain P {
+	margin-top: 4em;
+}
+
+#wrap {
+	display: none !important;
+}
+
+.main {
+	margin: 0 auto;
+	width: 50%;
+}

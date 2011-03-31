@@ -1,0 +1,31 @@
+- if (post.title)
+	h1 Editing #{post.title}
+- else
+	h1 New Post
+
+!= messages()
+
+form#post(action=base + '/post/save/' + post._id, method='post')
+
+	div
+		label(for='_id') Id:
+		input#_id(type='text', name='post[_id]', value=post._id)
+	div
+		label(for='title') Title:
+		input#title(type='text', name='post[title]', size=69, value=post.title)
+	div
+		label(for='body') Body:
+		textarea#body(name='post[body]', cols=50, rows=8)= post.body || ''
+	div
+		label(for='state') status
+		select#state(name='post[state]')
+			option(value='') velg status
+			- each option in statusOptions
+				- if (option === post.state)
+					option(value=option, selected='selected') #{option}
+				- else
+					option(value=option) #{option}
+	div
+		input(type='submit', value=post.title ? 'Update' : 'Create')
+
+	a(href='/posts') Tilbake

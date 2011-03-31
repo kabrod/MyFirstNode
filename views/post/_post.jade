@@ -1,0 +1,7 @@
+tr
+	td 
+		a.edit(href= base + '/post/edit/' + post._id) edit
+	td #{post.title}
+	td #{post.body}
+	td
+		a.remove(href= base + '/post/delete/' + post._id) delete

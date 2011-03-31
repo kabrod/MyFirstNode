@@ -1,0 +1,17 @@
+h1= title
+
+!= messages()
+
+p Display all post(s)
+
+table
+	thead
+		tr
+			th id
+			th title
+			th body
+	tbody
+
+		!= partial('post', posts)
+
+a(href='/post/add') New post
